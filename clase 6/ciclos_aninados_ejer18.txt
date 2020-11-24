@@ -1,0 +1,44 @@
+#Ejer 18a
+
+n=int(input("primer valor"))
+m=int(input("segundo valor"))
+
+for i in range(n,m):
+    for j in range(n,m):
+        print(i,j)
+
+
+n=int(input("primer valor"))
+m=int(input("segundo valor"))
+
+i=n
+j=n
+while(i<m):
+    j=n
+    while(j<m):
+        print(i,j)
+        j=j+1
+
+
+    i=i+1
+
+#Ejer 18b
+
+
+n=int(input("primer valor"))
+m=int(input("segundo valor"))
+
+i=n
+j=n
+flag=True
+
+while(i<m):
+    if(j<m):
+        print(i,j)
+        j=j+1
+    else:
+        j=n
+        flag=False
+    if(flag==False):
+        i=i+1
+        flag=True

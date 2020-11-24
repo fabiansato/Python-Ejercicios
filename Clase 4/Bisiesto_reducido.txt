@@ -1,0 +1,6 @@
+year = int(input("Ingrese un anio"))
+
+if(not(year%100==0 and year%400!=0) and year%4==0):
+    print("bis")
+else:
+    print("no bis")

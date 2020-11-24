@@ -1,0 +1,4 @@
+# cadena o string
+cadena=input("cadena")
+for char in cadena:
+print (char)

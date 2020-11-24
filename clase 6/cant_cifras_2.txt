@@ -1,0 +1,13 @@
+digito=1                                          #cantidad de digitos por defecto
+multiplicador=10
+Flag=True                                         #Bandera en TRUE
+
+n=int(input("ingresar un numero"))
+
+while(Flag):                                     #Mientras Flag==True
+    if(n>=multiplicador):
+        multiplicador*=10
+        digito+=1
+    else:
+        print(n, "tiene", digito, "digito(s)")
+        Flag=False

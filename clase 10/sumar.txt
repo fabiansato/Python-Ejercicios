@@ -1,0 +1,7 @@
+def suma(val1, valor2):
+    return val1+valor2
+
+n=int(input("ingresar 1er valor"))
+n1=int(input("ingresar 2do valor"))
+
+print("el resultado de sumar",n,"+",n1,"es:",suma(n,n1))
