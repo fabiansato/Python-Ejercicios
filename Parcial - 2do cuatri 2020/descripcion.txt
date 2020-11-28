@@ -1,0 +1,195 @@
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# COMPLETAR LOS SIGUIENTES DATOS OBLIGATORIOS #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# Nombre y apellido:  Fabian Emanuel Gonzalez
+# Comisión: 
+# DNI: 
+# E-mail: 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# ATENCIÓN: UNA VEZ FINALIZADO EL EXAMEN, AVISAR
+# AL DOCENTE PARA GUARDAR EL PARCIAL.
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+
+# CONDICIONES - LECTURA OBLIGATORIA #
+# 1) Leer adecuadamente cada ejercicio ANTES de comenzar. Calcular aprox. 30 min. por cada uno.
+# 2) Realizar exactamente lo solicitado por cada punto, ni más ni menos. Ante dudas, consultar al docente.
+# 3) NO asumir algo que el ejercicio no aclara. Despejar todas las dudas de interpretación.
+# 4) Revisar la INDENTACIÓN del código. Se descontará puntaje por no cumplir este requisito.
+# 5) NO se permite el uso de funciones de Python (ej. index, max, min, startsWith, etc.), DEBEN DESARROLLARLAS. Ante la duda, consultar al docente.
+# 6) Respetar CADA APARTADO de resolución. No escribir código en lugares arbitrarios.
+# 7) EXTREMAR la prolijidad del código (usar comentarios si se requiere). Un código confuso o poco cohesivo genera problemas al momento de la corrección.
+# 8) Eliminar todo lo que NO se use o hubiese sido utilizado como testing (prints, funciones repetidas, firmas de funciones, variables huérfanas, etc.).
+# 9) Revisar, como mínimo, 2 (dos) veces el código ANTES de entregar.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+# Ejercicio 1.
+Dado un n entero mayor o igual a cero que es ingresado por el usuario, realizar un programa que calcule el valor de la siguiente suma de n términos:
+
+x
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# SECCIÓN PARA RESOLUCIÓN DEL EJERCICIO 1. #
+# AGREGAR TODAS LAS LÍNEAS DE CÓDIGO QUE SEAN NECESARIAS. #
+
+#inicializa las variables con el valor correspondiente
+potencia=1
+divisor=1
+dividendo=2
+numerofinal=0.0
+numerosasumar = { } #inicializa el array sin valores
+numero=int(input("Ingrese un numero entero: \n"))
+
+
+for i in range (0,numero,1):
+    numerosasumar[i] =  (divisor**potencia)/dividendo  #guarda en el array los numeros a sumar
+
+    if (i + 1) % 2 == 0: #detecta si estamos en primer termino resta en segundo suma
+        numerofinal = numerofinal - numerosasumar[i]
+      x
+    else:
+        numerofinal = numerofinal + numerosasumar[i]
+
+
+    potencia = potencia + 2
+    divisor = divisor + 1
+    dividendo = dividendo + 2
+
+print ("La suma de todos los numeros es :",numerofinal)
+
+
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+# Ejercicio 2.
+Un banco almacena la información sobre sus clientes  en varias listas.
+Una de las listas almacena las contraseñas de sus clientes de la  siguiente manera:
+ListaContrasenias = [ contraseña_1, contraseña_2, contraseña_3,……..contraseña_n ]
+
+Se pide realizar lo siguiente: 
+a) Dada una contraseña ingresada por un usuario informar si existe o no en la lista
+b) Generar una nueva lista  con las contraseñas originales pero sin la vocal "a"
+c) Generar una nueva lista con las contraseñas originales pero sin vocales
+d) Generar una nueva lista con las contraseñas originales invertidas
+e) Generar una nueva lista con las contraseñas invertidas agregando un "*" al final
+f) Si queremos agregar una contraseña ingresada por un usuario al final de la lista original, escribir la líneas de código para esta situación
+g) Si tuviésemos definida una función llamada Da_Indice (pass) que al pasarle un argumento de una contraseña que existe en la lista y retorna un índice que queremos quitar de la lista original , escribir la línea de código para esta situación.
+
+Contestar las preguntas de la forma más sencilla posible, pensando en lo estudiado en clase y usando ese contenido. 
+No hace falta en el caso que se necesite desarrollar cada ítem desde cero se pueden apoyar en el anterior.
+ 
+Ejemplos: Son ilustrativos debe funcionar con cualquier juego de datos
+ListaContrasenias = [“*2kke45”,”papita25”,” tuptapi”]
+
+Punto a) si el usuario ingresa: papita25   el programa debe informar que existe
+Punto b) ListaPuntob = [ “*2kke45”,”ppit25”,” tuptpi” ] 
+Punto c) ListaPuntoc = [ “*2kk45”,”ppt25”,” tptp” ]
+Punto d) ListaPuntod = [ “*54ekk2*”,”52atipap”,” ipatput” ]
+Punto e) ListaPuntod = [ “*54ekk2**”,”52atipap*”,” ipatput*” ]
+Punto f) Si el usuario ingresa “cararota29” quedaría 
+ListaContrasenias = [“*2kke45”,”papita25”,” tuptapi”, “cararota29”]
+Punto g) Como Da_Indice (“papita25”) da el numero 1 entonces
+ListaContrasenias = [“*2kke45”,” tuptapi”, “cararota29”]
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# SECCIÓN PARA RESOLUCIÓN DEL EJERCICIO 2. #
+# AGREGAR TODAS LAS LÍNEAS DE CÓDIGO QUE SEAN NECESARIAS. #
+
+totalcontra=1
+vocales = ('a', 'e', 'i', 'o', 'u','A', 'E', 'I', 'O', 'U')
+letraA = ('a', 'A',)
+salir=1
+ListaContrasenias = [ ] #inicializa el array sin valores
+ListaContraSinVocal = [  ] #inicializa el array sin valores
+ListaContraSinA = [  ] #inicializa el array sin valores
+Listacontrainvertidas = []
+Listacontrainvertidasmas = []
+
+while salir == 1:  
+    contraseniaactual=input("Ingrese contraseña: \n")
+
+
+
+    for i in range(len(ListaContrasenias)):
+        if contraseniaactual == ListaContrasenias[i]:
+            contraseniaactual=input("La contraseña actual esta registrada: \n Ingrese nuevamente una contraseña:\n")
+
+
+    ListaContrasenias.append(contraseniaactual)
+    contraseniaactualinvertida = contraseniaactual[::-1]
+    contraseniaactualinvertidamas = contraseniaactualinvertida + "*"
+
+    Listacontrainvertidas.append(contraseniaactualinvertida)
+    Listacontrainvertidasmas.append(contraseniaactualinvertidamas)
+
+    for letra in letraA:
+        contraseniaactual = contraseniaactual.replace(letra, "")
+    ListaContraSinA.append(contraseniaactual)
+
+
+    for letra in vocales:
+        contraseniaactual = contraseniaactual.replace(letra, "")
+    ListaContraSinVocal.append(contraseniaactual)
+
+
+
+    salir=int(input("ingresa cualquier NUMERO para SALIR...: \n ingresa 1 para ingresar otra contraseña:\n"))
+
+print("\nLista de contraseñas:\n",ListaContrasenias)
+print("\nLista de contraseñas sin letra A:\n",ListaContraSinA)
+print("\nLista de contraseñas sin vocales:\n",ListaContraSinVocal)
+print("\nLista de contraseñas invertidas:\n",Listacontrainvertidas)
+print("\nLista de contraseñas con asterisco:\n",Listacontrainvertidasmas)
+
+
+
+
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+# Ejercicio 3.
+Hacer una función que tome una lista y un entero n, y quite de la lista aquellos elementos que sean números primos mayores a n. Además, la función debe devolver la cantidad de elementos quitados.
+Ejemplo:  n = 7
+Si la lista es [17, 2, 19, 1, 11, 18, 7, 35]  debe devolver 3 y la lista debe quedar como [2, 1, 18, 7, 35]. La cantidad se podrá agregar al final de la lista.
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# SECCIÓN PARA RESOLUCIÓN DEL EJERCICIO 3. #
+# AGREGAR TODAS LAS LÍNEAS DE CÓDIGO QUE SEAN NECESARIAS. #
+
+
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+# Ejercicio 4.
+Se necesita una función para automatizar la carga de combustible en un nuevo aeropuerto. No todos los aviones funcionan con el mismo tipo de combustible. Para agilizar el proceso de carga, se cuenta con una máquina que carga de manera automática. Se quiere que la máquina llene el tanque de un avión con el tipo de combustible apropiado para ese avión, y en caso de no ser posible llenarlo, que cargue lo más que pueda y luego emita una alerta avisando que el combustible fue insuficiente para llenar el tanque. Se pide escribir la función cargar() y se cuenta con las siguientes funciones a implementar (que no hay que desarrollar):
+
+capacidadDelTanque() retorna la cantidad de combustible que es capaz de cargar el avión en cuestión. Retorna una cantidad expresada en galones. 1 galón = 3.785 litros
+
+cantidadDeCombustibleEnTanque() retorna la cantidad de combustible que se encuentra en el tanque del avión en ese momento. Retorna una cantidad expresada en galones.
+
+tipoDeCombustibleEnTanque() retorna el tipo de combustible que carga el avión.     	
+
+agregarCombustible(galones, tipo) agrega la cantidad de combustible deseada del tipo deseado.
+
+reservaDisponibleEnAeropuerto(galones, tipo) devuelve la cantidad de galones de combustible disponibles en la reserva del aeropuerto del tipo de combustible especificado.
+emitirAlerta(): Esta función emite un alerta para avisar al aeropuerto acerca del combustible insuficiente.
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# SECCIÓN PARA RESOLUCIÓN DEL EJERCICIO 4. #
+# AGREGAR TODAS LAS LÍNEAS DE CÓDIGO QUE SEAN NECESARIAS. #
+
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
