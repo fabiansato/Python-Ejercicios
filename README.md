@@ -1,3 +1,4 @@
 Ejercicios de Python en General Separados por secciones.
 
-[TEST](../main/invertir_string.py "TEST")
+## Cadenas
+[TEST](../main/cadenas/invertir_string.py "Invertir string forma 1 (con función)")
