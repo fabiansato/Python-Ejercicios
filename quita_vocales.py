@@ -7,5 +7,5 @@ for letra in vocales:
     texto = texto.replace(letra, "")
 
 #Invierte la cadena
-#texto = texto[::-1]
+texto = texto[::-1]
 print (texto)
