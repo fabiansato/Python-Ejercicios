@@ -1,6 +1,6 @@
 #ingresar un numero y saber si es par
 
-nombre=input("Ingrese su nombre")
+
 numero=int(input("Ingrese un numero entero"))
 
 
