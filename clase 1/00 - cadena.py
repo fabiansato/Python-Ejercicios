@@ -1,4 +1,4 @@
-#ingresar un numero y saber si es par
+#Ingresar una cadena y mostrarla
 
 cadena=input("Ingrese una cadena")
 
