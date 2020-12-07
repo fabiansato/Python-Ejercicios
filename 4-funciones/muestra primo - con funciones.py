@@ -1,4 +1,4 @@
-from misFunciones import *
+from FuncionesDePrimo import *
 
 def esPrimo2(n):
     primo=True

@@ -8,7 +8,7 @@ cadena_final = " "
 
 
 for char in cadena:
-	if char == 'a':
+    if char == 'a':
         cadena_final = cadena_final + '*'
     else:
         cadena_final = cadena_final + char

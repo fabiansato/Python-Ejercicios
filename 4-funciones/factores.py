@@ -9,4 +9,3 @@ def factPrimos(n):
 n=int(input("ingrese un numero"))
 
 factPrimos(n)
-
