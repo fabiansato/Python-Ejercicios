@@ -1,0 +1,65 @@
+#ejer1
+def coincide(palabra, palAux):
+    for i in range(len(palAux)):
+        if(palabra[i]!=palAux[i]):
+            return False
+    return True
+
+def funcion(n, lista, pal):
+    aux=""
+    listaNueva=[]
+    for i in range(n):
+        aux+=pal[i]
+    len(aux)
+    cont=0
+    for i in lista:
+        if(coincide(i, aux)):
+            listaNueva.append(i)
+    print(listaNueva)
+
+
+#ejer2
+def esPrimo(numero):
+	
+    for i in range(2, numero):
+        if(numero%i==0):
+            return False
+    return True
+
+def trePrimosMayores(num):
+    cont=0
+    lista=[]
+    num+=1
+    while(cont<3):
+        if(esPrimo(num)):
+            cont+=1
+            lista.append(num)
+        num+=1
+    return(lista)
+
+
+
+#ejer3
+def func(n)
+	suma=0
+	for i in range(1,n+1):
+	    suma=suma+1/i**2
+	return suma
+
+#ejer4
+pos=[]
+
+while(True):
+    listaAntenas=antenasCercanas()
+    if len(listaAntenas)<3:
+        suspender()
+        desactivarTransmision()
+        señalSoS()
+    else:
+        if (elevacion()<50 or elevacion()>75):
+            corrigeElevacion()
+        listaDistancias=[]
+        for antena in listaAntenas:
+            listaDistancias.append(distancia(antena))
+        pos=fijarUbicacion(listaAntenas,listaDistancias,elevacion())
+        activarTransmision(pos)
